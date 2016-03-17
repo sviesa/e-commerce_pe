@@ -467,7 +467,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Misc */
 .links li { display:inline; }
-.links li.first { padding-left:0 !important; }
+// .links li.first { padding-left:0 !important; }
 .links li.last { background:none !important; padding-right:0 !important; }
 
 .link-cart { color:#dc6809 !important; font-weight:bold; }
@@ -515,10 +515,9 @@ tr.summary-details-excluded { font-style:italic; }
 .header .logo { float:left; margin:3px 0 10px 12px; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; }
-.header .quick-access { float:right; width:600px; padding:28px 10px 0 0; }
+.header .quick-access { float:right;/* width:600px;*/ padding:28px 10px 0 0; }
 .header .welcome-msg { margin:0; color:#fff; text-align:right; }
 .header .welcome-msg a { color:#ebbc58; }
-// {PE}
 // .header .form-search { position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; }
 // .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
 // .header .form-search input.input-text { float:left; border-color:#5c7989; width:209px; margin-right:4px; }
@@ -535,9 +534,9 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language label { font-weight:bold; padding-right:5px; color:#a7c6dd; vertical-align:middle; }
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.header .links { float:right; margin:0 0 6px; }
-.header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
-.header .links a { color:#ebbc58; }
+// .header .links { float:right; margin:0 0 6px; }
+// .header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
+// .header .links a { color:#ebbc58; }
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 .top-container .paypal-logo {text-align: left; display: inline-table;}
@@ -1106,7 +1105,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-tags h3 { font-size:13px; }
 .product-view .box-tags .product-tags { display:block; margin:0 0 15px; }
 .product-view .box-tags .product-tags li { display:inline; background:url(../images/bkg_pipe3.gif) 100% 4px no-repeat; padding:0 7px 0 4px; }
-.product-view .box-tags .product-tags li.first { padding-left:0; }
+// .product-view .box-tags .product-tags li.first { padding-left:0; }
 .product-view .box-tags .product-tags li.last { background:none; padding-right:0; }
 .product-view .box-tags .form-add label { display:block; font-size:13px; font-weight:bold; margin:0 0 5px; color:#0a263c;}
 .product-view .box-tags .form-add .input-box { float:left; width:305px; margin:0 5px 0 0; background:url(../images/i_tag_add.gif) 0 2px no-repeat; padding:0 0 0 23px; }

@@ -2,7 +2,15 @@
 @import 'mixins';
 // @import 'grid';
 
-
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src:  url(../fonts/MuseoSansRounded-500.woff2) ;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+  font-family: 'Museo Sans Rounded', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+}
 .header-container{
   background-color: #074058;
   @include prefix(box-shadow, 0px 2px 10px 0px rgba(0, 0, 0, 0.12));
@@ -14,17 +22,76 @@
   // z-index: 147;
 }
 .header {
-  max-width:1320px;
+  max-width:950px;
   margin:0 auto;
-  padding:10px;
+  padding:20px;
   text-align:right;
   position:relative;
   z-index:10;
-}
-
-a.logo{
-  width: 200px;
-  height: 28px;
-  background: url('../images/logo.png') no-repeat;
-  img{display: none;}
+  a.logo{
+    width: 200px;
+    height: 28px;
+    background: url('../images/logo.png') no-repeat;
+    img{display: none;}
+  }
+  p.username{
+    color: white;
+    cursor: pointer;
+    display: inline;
+    &:active{
+      & + p{ & + ul{display: block;}}
+    }
+  }
+  p.shoppingcart{
+    color: white;
+    cursor: pointer;
+    display: inline;
+  }
+  .links {
+    // display: none;
+    width: 125px;
+    position: absolute;
+    background-color: #3B6881;
+    li {
+      display: block;
+      text-align: left;
+      padding:7px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+      &:hover{
+        background-color: #477995;
+      }
+    }
+  }
+  .quick-access{
+    padding: 10px 0;
+    .username{
+      font-size: 11pt;
+      padding: 0 10px;
+      border-right: 2px solid #06374c;
+    }
+    .shoppingcart{
+      display: inline;
+      // padding-left: 15px;
+      position: relative;
+      margin-right: 35px;
+      svg{
+        position: absolute;
+        margin: 0 10px;
+      }
+      .items_count{
+        position:absolute;
+        padding: 0 0.45em;
+        font-size: 7pt;
+        left: 20px;
+        bottom: -10px;
+        @include prefix(border-radius, 100%);
+        color: white;
+        background-color: red;
+        border: 3px solid #074058;
+      }
+    }
+  }
 }
