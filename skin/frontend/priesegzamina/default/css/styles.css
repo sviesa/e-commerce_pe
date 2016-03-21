@@ -4993,16 +4993,25 @@ body {
     color: white;
     cursor: pointer;
     display: inline; }
-    .header p.username:active + p + ul {
-      display: block; }
-  .header p.shoppingcart {
+  .header .quick-access:hover ul.links {
+    display: block; }
+  .header .shoppingcart {
     color: white;
     cursor: pointer;
     display: inline; }
+    .header .shoppingcart:hover + ul {
+      display: none !important; }
   .header .links {
+    display: none;
     width: 125px;
     position: absolute;
-    background-color: #3B6881; }
+    right: 55px;
+    background-color: #3B6881;
+    -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+    -o-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35); }
     .header .links li {
       display: block;
       text-align: left;
@@ -5011,7 +5020,7 @@ body {
         text-decoration: none;
         color: white; }
       .header .links li:hover {
-        background-color: #477995; }
+        background-color: #477995 !important; }
   .header .quick-access {
     padding: 10px 0; }
     .header .quick-access .username {
@@ -5039,3 +5048,47 @@ body {
         color: white;
         background-color: red;
         border: 3px solid #074058; }
+
+.main-container {
+  background: url(../images/PE/bkg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .main-container .main {
+    background: none; }
+
+.footer-container {
+  padding: 20px 0px 0px;
+  border: none;
+  background: #0e3046;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 90%; }
+  .footer-container p {
+    margin: 0; }
+  .footer-container .col {
+    display: table-cell;
+    text-align: left; }
+    .footer-container .col.one {
+      width: 20%; }
+    .footer-container .col.two {
+      width: 17%; }
+    .footer-container .col.three {
+      width: 50%; }
+    .footer-container .col.four {
+      position: relative; }
+      .footer-container .col.four > div {
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+    .footer-container .col .title {
+      font-size: 155%;
+      margin-bottom: 20px; }
+    .footer-container .col div {
+      display: inline; }
+    .footer-container .col a {
+      margin-right: 15px;
+      color: currentColor; }

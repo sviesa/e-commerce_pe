@@ -38,20 +38,26 @@ body{
     color: white;
     cursor: pointer;
     display: inline;
-    &:active{
-      & + p{ & + ul{display: block;}}
-    }
+
   }
-  p.shoppingcart{
+  .quick-access:hover ul.links{
+    display: block;
+  }
+  .shoppingcart{
     color: white;
     cursor: pointer;
     display: inline;
+    &:hover{
+      & + ul{display: none !important;}
+    }
   }
   .links {
-    // display: none;
+    display: none;
     width: 125px;
     position: absolute;
+    right: 55px;
     background-color: #3B6881;
+    @include prefix(box-shadow, 5px 5px 8px rgba(0, 0, 0, 0.35));
     li {
       display: block;
       text-align: left;
@@ -61,7 +67,7 @@ body{
         color: white;
       }
       &:hover{
-        background-color: #477995;
+        background-color: #477995 !important;
       }
     }
   }
@@ -93,5 +99,43 @@ body{
         border: 3px solid #074058;
       }
     }
+  }
+}
+
+.main-container{
+  background: url(../images/PE/bkg.jpg) no-repeat center center;
+  @include prefix(background-size, cover);
+  .main{background: none;}
+}
+
+.footer-container{
+  p{margin: 0;}
+  padding: 20px 0px 0px;
+  border:none;
+  background: #0e3046;
+  color: rgba(255,255,255, .3);
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 90%;
+  .col{
+    display: table-cell;
+    // margin-top: 20px;
+    // float: left;
+    text-align: left;
+    &.one{width: 20%}
+    &.two{width: 17%}
+    &.three{width: 50%}
+    &.four{
+      position: relative;
+      > div{position: absolute; bottom: 0; right: 0;}
+    }
+    .title{
+      font-size: 155%;
+      margin-bottom: 20px;
+    }
+    div{
+      display: inline;
+    }
+    a{margin-right: 15px; color: currentColor;}
   }
 }
