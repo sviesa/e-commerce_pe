@@ -1,6 +1,6 @@
-@import 'default_styles';
 @import 'mixins';
 // @import 'grid';
+@import 'default_styles';
 
 @font-face {
     font-family: 'Museo Sans Rounded';
@@ -8,9 +8,42 @@
     font-weight: 500;
     font-style: normal;
 }
+
 body{
-  font-family: 'Museo Sans Rounded', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  background:#0e3046;
+  font:12px/1.55 Museo Sans Rounded, Arial, Helvetica, sans-serif;
+  // color:#2f2f2f;
+  color: rgba(255, 255, 255, .5);
+  text-align:center;
+  select{background: #074058 !important; color: white;}
+  textarea{background: #074058 !important; color: white;}
+  input{
+    border:0; background: #074058 !important;
+    color: white !important;
+    &:focus{background: #3b6881 !important;
+    }
+  }
 }
+.block-poll,.block-banner,.paypal-logo, .number, p.required{display: none !important}
+.step-title{
+  background: none !important;
+  border:0 !important;
+}
+.section.allow.active .step-title h2{color: white;}
+.step{
+  label{color: white; &.required em{color: currentColor}}
+}
+.data-table{
+  border: 0;
+  background:none !important;
+  tr{background:none !important;}
+  td{border:0 !important}
+  tfoot tr{background:none !important; td{background: none !important}}
+}
+.opc .step.a-item{background: none; border:0; border-top: 1px solid rgba(255,255,255,.3)}
+
+
+/****************** header + footer **************************/
 .header-container{
   background-color: #074058;
   @include prefix(box-shadow, 0px 2px 10px 0px rgba(0, 0, 0, 0.12));
@@ -101,14 +134,13 @@ body{
     }
   }
 }
-
 .main-container{
   background: url(../images/PE/bkg.jpg) no-repeat center center;
   @include prefix(background-size, cover);
   .main{background: none;}
 }
-
 .footer-container{
+  svg{cursor: pointer;}
   p{margin: 0;}
   padding: 20px 0px 0px;
   border:none;
@@ -136,6 +168,10 @@ body{
     div{
       display: inline;
     }
-    a{margin-right: 15px; color: currentColor;}
+    a{
+      margin-right: 15px;
+      color: currentColor;
+      cursor: pointer;
+    }
   }
 }
