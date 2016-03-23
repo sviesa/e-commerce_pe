@@ -3,10 +3,10 @@
 @import 'default_styles';
 
 @font-face {
-    font-family: 'Museo Sans Rounded';
-    src:  url(../fonts/MuseoSansRounded-500.woff2) ;
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Museo Sans Rounded';
+  src:  url(../fonts/MuseoSansRounded-500.woff2) ;
+  font-weight: 500;
+  font-style: normal;
 }
 
 body{
@@ -16,14 +16,17 @@ body{
   color: rgba(255, 255, 255, .5);
   text-align:center;
   select{background: #074058 !important; color: white;}
+  select.validation-failed{background: #074058 !important; color: white;}
   textarea{background: #074058 !important; color: white;}
   input{
     border:0; background: #074058 !important;
     color: white !important;
-    &:focus{background: #3b6881 !important;
-    }
+    &:focus{background: #3b6881 !important;}
+    &.validation-failed{background: #3b6881 !important;}
   }
+  button[type="submit"]{background: #3b6881 !important; }
 }
+form *{background: none !important;}
 .block-poll,.block-banner,.paypal-logo, .number, p.required{display: none !important}
 .step-title{
   background: none !important;
@@ -71,7 +74,6 @@ body{
     color: white;
     cursor: pointer;
     display: inline;
-
   }
   .quick-access:hover ul.links{
     display: block;
@@ -140,7 +142,6 @@ body{
   .main{background: none;}
 }
 .footer-container{
-  svg{cursor: pointer;}
   p{margin: 0;}
   padding: 20px 0px 0px;
   border:none;
@@ -172,6 +173,7 @@ body{
       margin-right: 15px;
       color: currentColor;
       cursor: pointer;
+      &:hover{color:rgba(255,255,255, .6); }
     }
   }
 }
